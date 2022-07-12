@@ -1,0 +1,48 @@
+
+{{#each this}}
+{{#if this.poster_path}}
+  <div class='movie-card' >
+    <img src="https://image.tmdb.org/t/p/w500{{poster_path}}"
+      class='movie-header' alt="posterv of cinema"
+      id='{{id}}'
+    >
+      {{!-- <div class='header-icon-container'>
+        <a href='#'>
+          <i class='material-icons header-icon'></i>
+        </a>
+      </div> --}}
+    </img>
+    <!--movie-header-->
+    <div class='movie-content'>
+      <div class='movie-content-header'>
+        <a href='#'>
+          <h3 class='movie-title'>{{title}}</h3>
+        </a>
+        {{! <div class='imax-logo'></div> }}
+      </div>
+      <div class='movie-info'>
+        <div class='info-section genre'>
+          <span class="genre-name">{{janreStr}}</span>
+        </div>
+        <div class='info-section'>
+          <span>{{date_release}}</span>
+        </div>
+        <!--date,time-->
+        <div class='info-section'>
+          {{!-- <label>Vote</label> --}}
+          {{!-- <span>{{vote_count}}</span> --}}
+        </div>
+        <!--screen-->
+        <div class='info-section extend'>
+          {{!-- <label>Votes</label> --}}
+          <span>{{vote_average}}</span>
+        </div>
+        <!--row-->
+
+        <!--seat-->
+      </div>
+    </div>
+    <!--movie-content-->
+  </div>
+{{/if}}
+{{/each}}
